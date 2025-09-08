@@ -1,0 +1,158 @@
+@import './styles/animations.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Premium chocolate company design system with sleek modern aesthetics */
+
+@layer base {
+  :root {
+    /* Refined darker color palette with rich chocolate tones */
+    --background: 25 30% 8%;
+    --foreground: 0 0% 100%;
+
+    --card: 25 25% 12%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 25 25% 12%;
+    --popover-foreground: 0 0% 100%;
+
+    /* Deep espresso primary */
+    --primary: 0 0% 100%;
+    --primary-foreground: 25 30% 8%;
+    
+    /* Rich warm secondary */
+    --secondary: 25 25% 15%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Refined muted tones */
+    --muted: 25 20% 20%;
+    --muted-foreground: 0 0% 80%;
+
+    /* Luxury bronze accent */
+    --accent: 35 85% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 25 20% 20%;
+    --input: 25 20% 15%;
+    --ring: 35 85% 65%;
+    
+    /* Premium chocolate palette */
+    --espresso: 20 70% 6%;
+    --dark-chocolate: 25 55% 15%;
+    --milk-chocolate: 30 45% 35%;
+    --cocoa-cream: 35 25% 75%;
+    --luxury-gold: 35 85% 65%;
+    --warm-bronze: 25 50% 45%;
+    
+    /* Rich chocolate gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--espresso)), hsl(var(--dark-chocolate)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--espresso) / 0.98), hsl(var(--dark-chocolate) / 0.95));
+    --gradient-luxury: linear-gradient(135deg, hsl(var(--luxury-gold) / 0.15), hsl(var(--warm-bronze) / 0.08));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--dark-chocolate) / 0.5));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--luxury-gold)), hsl(var(--warm-bronze)));
+    
+    /* Premium shadows and effects */
+    --shadow-luxury: 0 25px 50px -12px hsl(var(--espresso) / 0.25);
+    --shadow-elegant: 0 10px 25px -3px hsl(var(--dark-chocolate) / 0.1);
+    --shadow-soft: 0 4px 12px -2px hsl(var(--dark-chocolate) / 0.08);
+    --glow-accent: 0 0 30px hsl(var(--luxury-gold) / 0.3);
+    
+    /* Smooth premium transitions */
+    --transition-luxury: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground));
+  }
+}
