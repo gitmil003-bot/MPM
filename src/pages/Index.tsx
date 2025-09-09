@@ -130,7 +130,7 @@ const Index = () => {
             data-aos="fade-up"
             data-aos-delay="600"
           >
-            Delivering the finest raw chocolate materials with uncompromising quality and excellence for over a decade
+            WE ARE NOT THE FIRST AND WE ARE NOT THE BIGGEST <br></br> BUT WE CAN BE YOUR TRUSTWORHTY PARTNER
           </p>
           
           <div 
@@ -239,12 +239,11 @@ const Index = () => {
           <div className="text-center mb-20 animate-fade-in">
             <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Globe className="w-4 h-4" />
-              About Our Excellence
+              Get To Know
             </div>
-            <h2 className="text-5xl md:text-6xl font-bold text-primary mb-8 tracking-tight">Crafting Quality</h2>
+            <h2 className="text-5xl md:text-6xl font-bold text-primary mb-8 tracking-tight">About Us</h2>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto font-light leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-              Ut enim ad minim veniam, quis nostrud exercitation.
+              <b>PT Mandala Prima Makmur</b> was established since 1997. Starting from trading company. The products were cocoa powder and cocoa beans. We bought cocoa powder from local manufacture and sold to regional and also overseas market.
             </p>
           </div>
           
@@ -253,10 +252,9 @@ const Index = () => {
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-accent flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Factory className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-2xl font-bold text-primary mb-4">Manufacturing Excellence</h3>
+              <h3 className="text-2xl font-bold text-primary mb-4">Business</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation.
+                We have a very good business relationship until now. In 2009 we started to build our own factory 2010 we have been one of cocoa powder supplier for local and export market.
               </p>
             </Card>
             
@@ -264,10 +262,9 @@ const Index = () => {
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-accent flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Award className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-2xl font-bold text-primary mb-4">Quality Assurance</h3>
+              <h3 className="text-2xl font-bold text-primary mb-4">Quality</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation.
+               We create a good, customized and stable product which make us become more confident to develop the market to all countries.
               </p>
             </Card>
             
@@ -275,10 +272,9 @@ const Index = () => {
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-accent flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Truck className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-2xl font-bold text-primary mb-4">Reliable Supply</h3>
+              <h3 className="text-2xl font-bold text-primary mb-4">Product</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation.
+                In 2016 we started to produce premium chocolate drink. We produce healthy and sensational 12 variants original and combination chocolate drink.
               </p>
             </Card>
           </div>
@@ -293,10 +289,10 @@ const Index = () => {
               Premium Materials
             </div>
             <h2 className="text-5xl md:text-6xl font-bold text-primary mb-8 tracking-tight">Our Products</h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto font-light leading-relaxed">
+            {/* <p className="text-xl text-muted-foreground max-w-4xl mx-auto font-light leading-relaxed">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
               Ut enim ad minim veniam, quis nostrud exercitation.
-            </p>
+            </p> */}
           </div>
           
           <div className="grid lg:grid-cols-3 gap-8">
@@ -435,8 +431,7 @@ const Index = () => {
             </div>
             <h2 className="text-5xl md:text-6xl font-bold text-primary mb-8 tracking-tight">Contact Us</h2>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto font-light leading-relaxed">
-             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-              Ut enim ad minim veniam, quis nostrud exercitation.
+             Ready to experience the best quality chocolate? reach us out!!
             </p>
           </div>
           
