@@ -451,31 +451,31 @@ const Index = () => {
                     title: "ISO 9001:2015",
                     description: "Quality Management System",
                     year: "2023",
-                    image: "/certificates/iso9001.png" // Add your certificate images
+                    image: "/placeholder.svg" // Temporary placeholder until certificate images are available
                   },
                   {
                     title: "HACCP",
                     description: "Food Safety System",
                     year: "2023",
-                    image: "/certificates/haccp.png"
+                    image: "/placeholder.svg"
                   },
                   {
                     title: "Halal Certification",
                     description: "MUI Certified",
                     year: "2023",
-                    image: "/certificates/halal.png"
+                    image: "/placeholder.svg"
                   },
                   {
                     title: "FDA Registration",
                     description: "US Food & Drug Administration",
                     year: "2023",
-                    image: "/certificates/fda.png"
+                    image: "/placeholder.svg"
                   },
                   {
                     title: "GMP Certificate",
                     description: "Good Manufacturing Practice",
                     year: "2023",
-                    image: "/certificates/gmp.png"
+                    image: "/placeholder.svg"
                   },
                 ].map((cert, index) => (
                   <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
@@ -551,8 +551,8 @@ const Index = () => {
                     </div>
                     <div>
                       <p className="font-semibold text-primary text-lg mb-1">Phone</p>
-                      <p className="text-muted-foreground">+62</p>
-                      <p className="text-muted-foreground">+62</p>
+                      <p className="text-muted-foreground">+62 21 29000364-5</p>
+                      <p className="text-muted-foreground">+62 857-1675-5537 (Whatsapp)</p>
                     </div>
                   </div>
                   
