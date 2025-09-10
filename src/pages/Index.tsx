@@ -251,6 +251,7 @@ const Index = () => {
               And now start from 2025 we increase the production capacity on the 12,500m2 land with Food Safety System, trustable quality control team and more complete certification.<br></br>
               <br></br>
               ---
+              <br></br>
               We are not the first<br></br>We are not the biggest<br></br>But We are a trustworthy partner
 
             </p>
