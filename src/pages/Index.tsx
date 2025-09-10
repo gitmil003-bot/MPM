@@ -132,7 +132,7 @@ const Index = () => {
             data-aos="fade-up"
             data-aos-delay="600"
           >
-            WE ARE NOT THE FIRST AND WE ARE NOT THE BIGGEST <br></br> BUT WE CAN BE YOUR TRUSTWORHTY PARTNER
+            WE ARE NOT THE FIRST <br></br> WE ARE NOT THE BIGGEST <br></br> BUT WE CAN BE YOUR TRUSTWORHTY PARTNER
           </p>
           
           <div 
