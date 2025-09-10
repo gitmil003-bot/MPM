@@ -451,55 +451,118 @@ const Index = () => {
                   {
                     title: "ISO 9001:2015",
                     description: "Quality Management System",
-                    year: "2023",
-                    image: placeholderImage // Temporary placeholder until certificate images are available
+                    year: "Valid until 2028",
+                    images: [
+                      "certificates/SERTIFIKAT ISO PT MANDALA PRIMA MAKMUR VALID 04 MEI 2028/page_1.png",
+                      "certificates/SERTIFIKAT ISO PT MANDALA PRIMA MAKMUR VALID 04 MEI 2028/page_2.png"
+                    ]
                   },
                   {
                     title: "HACCP",
                     description: "Food Safety System",
-                    year: "2023",
-                    image: placeholderImage
+                    year: "Valid",
+                    images: ["certificates/HACCP/page_1.png"]
                   },
                   {
                     title: "Halal Certification",
                     description: "MUI Certified",
-                    year: "2023",
-                    image: placeholderImage
+                    year: "Valid",
+                    images: [
+                      "certificates/SERTIFIKAT HALAL PT MPM/page_1.png",
+                      "certificates/SERTIFIKAT HALAL PT MPM/page_2.png",
+                      "certificates/SERTIFIKAT HALAL PT MPM/page_3.png"
+                    ]
                   },
                   {
-                    title: "FDA Registration",
-                    description: "US Food & Drug Administration",
-                    year: "2023",
-                    image: placeholderImage
+                    title: "SNI Certification",
+                    description: "Indonesian National Standard",
+                    year: "Valid until 2029",
+                    images: [
+                      "certificates/SERTIFIKAT SNI PT MANDALA PRIMA MAKMUR VALID 04 MEI 2029/page_1.png",
+                      "certificates/SERTIFIKAT SNI PT MANDALA PRIMA MAKMUR VALID 04 MEI 2029/page_2.png"
+                    ]
                   },
                   {
-                    title: "GMP Certificate",
-                    description: "Good Manufacturing Practice",
-                    year: "2023",
-                    image: placeholderImage
+                    title: "Kosher Certification",
+                    description: "Kosher Certified",
+                    year: "Valid 2025-2026",
+                    images: ["certificates/Sertifikat Kosher 2025-2026_unlocked/page_1.png"]
+                  },
+                  {
+                    title: "BPOM Dives",
+                    description: "Food Safety Authority Registration",
+                    year: "Valid",
+                    images: [
+                      "certificates/BPOM Dives/page_1.png",
+                      "certificates/BPOM Dives/page_2.png"
+                    ]
+                  },
+                  {
+                    title: "BPOM Dritto",
+                    description: "Food Safety Authority Registration",
+                    year: "Valid",
+                    images: [
+                      "certificates/BPOM Dritto/page_1.png",
+                      "certificates/BPOM Dritto/page_2.png"
+                    ]
                   },
                 ].map((cert, index) => (
                   <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                     <div className="p-2">
-                      <Card className="overflow-hidden shadow-soft hover:shadow-elegant transition-all duration-500 group border-0">
-                        <div className="relative h-[300px] overflow-hidden">
-                          <img 
-                            src={cert.image} 
-                            alt={cert.title}
-                            className="w-full h-full object-contain p-4 bg-white"
-                            onError={(e) => {
-                              const target = e.target as HTMLImageElement;
-                              target.src = placeholderImage; // Fallback image
-                            }}
-                          />
-                          <div className="absolute inset-0 bg-gradient-accent opacity-0 group-hover:opacity-10 transition-opacity duration-500" />
-                        </div>
-                        <div className="p-6 text-center bg-gradient-card">
-                          <h3 className="text-xl font-bold text-primary mb-2">{cert.title}</h3>
-                          <p className="text-sm text-muted-foreground mb-2">{cert.description}</p>
-                          <p className="text-xs text-accent">{cert.year}</p>
-                        </div>
-                      </Card>
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <Card className="overflow-hidden shadow-soft hover:shadow-elegant transition-all duration-500 group border-0 cursor-pointer">
+                            <div className="relative h-[300px] overflow-hidden">
+                              <div className="w-full h-full bg-white flex items-center justify-center">
+                                {cert.images && cert.images[0] ? (
+                                  <img
+                                    src={cert.images[0]}
+                                    alt={cert.title}
+                                    className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
+                                    loading="lazy"
+                                  />
+                                ) : (
+                                  <div className="flex flex-col items-center justify-center space-y-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="w-20 h-20 text-accent/50 group-hover:text-accent transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                                    </svg>
+                                    <span className="text-sm font-medium text-accent/70 group-hover:text-accent transition-colors">Click to view certificate</span>
+                                  </div>
+                                )}
+                              </div>
+                              <div className="absolute inset-0 bg-gradient-accent opacity-0 group-hover:opacity-10 transition-opacity duration-500" />
+                            </div>
+                            <div className="p-6 text-center bg-gradient-card">
+                              <h3 className="text-xl font-bold text-primary mb-2">{cert.title}</h3>
+                              <p className="text-sm text-muted-foreground mb-2">{cert.description}</p>
+                              <p className="text-xs text-accent">{cert.year}</p>
+                            </div>
+                          </Card>
+                        </DialogTrigger>
+                        <DialogContent className="max-w-4xl h-[90vh] p-0">
+                          <DialogHeader className="px-6 py-4 border-b">
+                            <DialogTitle>{cert.title}</DialogTitle>
+                            <p className="text-sm text-muted-foreground">{cert.description} - {cert.year}</p>
+                          </DialogHeader>
+                          <div className="flex-1 w-full h-[calc(90vh-80px)] bg-[#f5f5f5] overflow-y-auto">
+                            <div className="flex flex-col items-center gap-4 p-6">
+                              {cert.images.map((image, imageIndex) => (
+                                <div 
+                                  key={imageIndex} 
+                                  className="w-full max-w-3xl bg-white rounded-lg shadow-lg overflow-hidden"
+                                >
+                                  <img
+                                    src={image}
+                                    alt={`${cert.title} - Page ${imageIndex + 1}`}
+                                    className="w-full h-auto"
+                                    loading="lazy"
+                                  />
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        </DialogContent>
+                      </Dialog>
                     </div>
                   </CarouselItem>
                 ))}
