@@ -244,11 +244,13 @@ const Index = () => {
               Get To Know
             </div>
             <h2 className="text-5xl md:text-6xl font-bold text-primary mb-8 tracking-tight">About Us</h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto font-light leading-relaxed">
+            <p className="text-xl text-muted-foreground max-w-6xl mx-auto font-light leading-relaxed">
               The company started in 2001, starting as a trading company for cocoa and chocolate products.<br></br>
               2010 We started to produce cocoa powder by ourselves for local market sales.<br></br>
               By the time, we started to introduce our products overseas and now we have been able to export our products to several countries at 4 continents. <br></br>
               And now start from 2025 we increase the production capacity on the 12,500m2 land with Food Safety System, trustable quality control team and more complete certification.<br></br>
+              <br></br>
+              ---
               We are not the first<br></br>We are not the biggest<br></br>But We are a trustworthy partner
 
             </p>
