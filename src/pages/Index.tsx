@@ -7,6 +7,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import heroImage from "@/assets/chocolate-hero.jpg";
 import mapsImage from "@/assets/images/maps.png";
 import logoImage from "@/assets/images/Logo PT. Mandala Prima.png";
+import placeholderImage from "/placeholder.svg";
 import { useState, useEffect } from "react";
 import { useScrollSpy } from "@/hooks/use-scroll-spy";
 import AOS from 'aos';
@@ -451,31 +452,31 @@ const Index = () => {
                     title: "ISO 9001:2015",
                     description: "Quality Management System",
                     year: "2023",
-                    image: "/placeholder.svg" // Temporary placeholder until certificate images are available
+                    image: placeholderImage // Temporary placeholder until certificate images are available
                   },
                   {
                     title: "HACCP",
                     description: "Food Safety System",
                     year: "2023",
-                    image: "/placeholder.svg"
+                    image: placeholderImage
                   },
                   {
                     title: "Halal Certification",
                     description: "MUI Certified",
                     year: "2023",
-                    image: "/placeholder.svg"
+                    image: placeholderImage
                   },
                   {
                     title: "FDA Registration",
                     description: "US Food & Drug Administration",
                     year: "2023",
-                    image: "/placeholder.svg"
+                    image: placeholderImage
                   },
                   {
                     title: "GMP Certificate",
                     description: "Good Manufacturing Practice",
                     year: "2023",
-                    image: "/placeholder.svg"
+                    image: placeholderImage
                   },
                 ].map((cert, index) => (
                   <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
@@ -488,7 +489,7 @@ const Index = () => {
                             className="w-full h-full object-contain p-4 bg-white"
                             onError={(e) => {
                               const target = e.target as HTMLImageElement;
-                              target.src = "/placeholder.svg"; // Fallback image
+                              target.src = placeholderImage; // Fallback image
                             }}
                           />
                           <div className="absolute inset-0 bg-gradient-accent opacity-0 group-hover:opacity-10 transition-opacity duration-500" />
