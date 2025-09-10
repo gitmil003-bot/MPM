@@ -628,8 +628,7 @@ const Index = () => {
                     </div>
                     <div>
                       <p className="font-semibold text-primary text-lg mb-1">Email</p>
-                      <p className="text-muted-foreground">@gmail.com</p>
-                      <p className="text-muted-foreground">@gmail.com</p>
+                      <p className="text-muted-foreground">operational@mprimam.com</p>
                     </div>
                   </div>
                 </div>
@@ -688,8 +687,7 @@ const Index = () => {
             <div className="md:col-span-2">
               <h3 className="text-2xl font-bold mb-6 text-white">PT. Mandala Prima Makmur</h3>
               <p className="text-white/90 mb-6 leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+                WE ARE NOT THE FIRST AND WE ARE NOT THE BIGGEST BUT WE CAN BE YOUR TRUSTWORHTY PARTNER
               </p>
               <div className="flex space-x-4">
                 <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors cursor-pointer">
@@ -713,8 +711,8 @@ const Index = () => {
               <div className="space-y-3 text-white/90">
                 <p>Paramount Marketplace, Ruko Tematik P52</p>
                 <p>Gading Serpong, Tangerang 15810</p>
-                <p>Phone: +62</p>
-                <p>Email: @gmail.com</p>
+                <p>Phone: +62 21 29000364-5</p>
+                <p>Email: operational@mprimam.com</p>
               </div>
             </div>
           </div>
