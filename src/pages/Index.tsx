@@ -2,7 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Separator } from "@/components/ui/separator";
-import { MapPin, Phone, Mail, Factory, Truck, Award, ArrowRight, Star, Globe } from "lucide-react";
+import { MapPin, Phone, Mail, Factory, Truck, Award, ArrowRight, Star, Globe, ChevronLeft, ChevronRight } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import heroImage from "@/assets/chocolate-hero.jpg";
 import mapsImage from "@/assets/images/maps.png";
 import logoImage from "@/assets/images/Logo PT. Mandala Prima.png";
@@ -418,6 +419,97 @@ const Index = () => {
                 </Dialog>
               </div>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications Section */}
+      <section className="py-24 bg-gradient-luxury">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-20 animate-fade-in">
+            <div className="inline-flex items-center gap-2 bg-luxury-gold/10 text-luxury-gold px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <Award className="w-4 h-4" />
+              Our Achievements
+            </div>
+            <h2 className="text-5xl md:text-6xl font-bold text-primary mb-8 tracking-tight">Certifications</h2>
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto font-light leading-relaxed">
+              Our commitment to quality and excellence is recognized through various international certifications.
+            </p>
+          </div>
+
+          <div className="relative">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full"
+            >
+              <CarouselContent className="py-4">
+                {[
+                  {
+                    title: "ISO 9001:2015",
+                    description: "Quality Management System",
+                    year: "2023",
+                    image: "/certificates/iso9001.png" // Add your certificate images
+                  },
+                  {
+                    title: "HACCP",
+                    description: "Food Safety System",
+                    year: "2023",
+                    image: "/certificates/haccp.png"
+                  },
+                  {
+                    title: "Halal Certification",
+                    description: "MUI Certified",
+                    year: "2023",
+                    image: "/certificates/halal.png"
+                  },
+                  {
+                    title: "FDA Registration",
+                    description: "US Food & Drug Administration",
+                    year: "2023",
+                    image: "/certificates/fda.png"
+                  },
+                  {
+                    title: "GMP Certificate",
+                    description: "Good Manufacturing Practice",
+                    year: "2023",
+                    image: "/certificates/gmp.png"
+                  },
+                ].map((cert, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <div className="p-2">
+                      <Card className="overflow-hidden shadow-soft hover:shadow-elegant transition-all duration-500 group border-0">
+                        <div className="relative h-[300px] overflow-hidden">
+                          <img 
+                            src={cert.image} 
+                            alt={cert.title}
+                            className="w-full h-full object-contain p-4 bg-white"
+                            onError={(e) => {
+                              const target = e.target as HTMLImageElement;
+                              target.src = "/placeholder.svg"; // Fallback image
+                            }}
+                          />
+                          <div className="absolute inset-0 bg-gradient-accent opacity-0 group-hover:opacity-10 transition-opacity duration-500" />
+                        </div>
+                        <div className="p-6 text-center bg-gradient-card">
+                          <h3 className="text-xl font-bold text-primary mb-2">{cert.title}</h3>
+                          <p className="text-sm text-muted-foreground mb-2">{cert.description}</p>
+                          <p className="text-xs text-accent">{cert.year}</p>
+                        </div>
+                      </Card>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <div className="absolute -left-12 top-1/2 transform -translate-y-1/2">
+                <CarouselPrevious className="bg-background/80 backdrop-blur-sm hover:bg-background border-0" />
+              </div>
+              <div className="absolute -right-12 top-1/2 transform -translate-y-1/2">
+                <CarouselNext className="bg-background/80 backdrop-blur-sm hover:bg-background border-0" />
+              </div>
+            </Carousel>
           </div>
         </div>
       </section>
