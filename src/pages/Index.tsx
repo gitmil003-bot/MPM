@@ -56,7 +56,7 @@ const Index = () => {
           />
           
           <div className="hidden md:flex items-center space-x-1">
-            {['home', 'about', 'products', 'contact'].map((item) => (
+            {['home', 'about', 'products', 'certificate', 'contact'].map((item) => (
               <a
                 key={item}
                 href={`#${item}`}
