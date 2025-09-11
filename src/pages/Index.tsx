@@ -322,7 +322,7 @@ const Index = () => {
       </section>
 
       {/* Certifications Section */}
-      <section className="py-24 bg-gradient-luxury">
+      <section id="certificate" className="py-24 bg-gradient-luxury">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20 animate-fade-in">
             <div className="inline-flex items-center gap-2 bg-luxury-gold/10 text-luxury-gold px-4 py-2 rounded-full text-sm font-medium mb-6">
