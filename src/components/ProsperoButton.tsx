@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import prosperoLogo from "@/assets/images/Logo Prosperofood.png";
 
 export const ProsperoButton = () => {
@@ -9,17 +10,29 @@ export const ProsperoButton = () => {
   };
 
   return (
-    <Button
-      onClick={handleClick}
-      className="fixed bottom-24 right-6 rounded-full w-16 h-16 bg-white hover:bg-gray-100 shadow-lg flex items-center justify-center z-50 p-0 overflow-hidden border-2 border-amber-600"
-      size="icon"
-      title="Visit Prospero"
-    >
-      <img 
-        src={prosperoLogo} 
-        alt="Prospero Food"
-        className="w-full h-full object-contain p-2"
-      />
-    </Button>
+    <TooltipProvider>
+      <Tooltip delayDuration={0}>
+        <TooltipTrigger asChild>
+          <Button
+            onClick={handleClick}
+            className="fixed bottom-[120px] right-8 rounded-full w-[60px] h-[60px] bg-white hover:bg-gray-50 shadow-xl flex items-center justify-center z-50 p-0 overflow-hidden border-2 border-amber-600 transition-all duration-300 hover:scale-110"
+            size="icon"
+          >
+            <img 
+              src={prosperoLogo} 
+              alt="Prospero Food"
+              className="w-full h-full object-contain p-2"
+            />
+          </Button>
+        </TooltipTrigger>
+        <TooltipContent 
+          side="left" 
+          className="bg-white/90 backdrop-blur-sm px-4 py-3 rounded-lg shadow-xl border border-gray-100"
+          sideOffset={5}
+        >
+          <p className="text-sm font-medium text-gray-800">Visit Prospero Website ✨</p>
+        </TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
   );
 };
