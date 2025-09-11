@@ -1,13 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { ProsperoButton } from "@/components/ProsperoButton";
 import { Separator } from "@/components/ui/separator";
-import { MapPin, Phone, Mail, Factory, Truck, Award, ArrowRight, Star, Globe, ChevronLeft, ChevronRight } from "lucide-react";
+import { MapPin, Phone, Mail, Truck, Award, ArrowRight, Star, Globe, ChevronLeft, ChevronRight, Factory } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import heroImage from "@/assets/chocolate-hero.jpg";
 import mapsImage from "@/assets/images/maps.png";
 import logoImage from "@/assets/images/Logo PT. Mandala Prima.png";
-import placeholderImage from "/placeholder.svg";
+import cocoaVariants from "@/assets/images/CocoaVariants.jpg";
 import { useState, useEffect } from "react";
 import { useScrollSpy } from "@/hooks/use-scroll-spy";
 import AOS from 'aos';
@@ -36,6 +38,10 @@ const Index = () => {
   }, []);
   return (
     <div className="min-h-screen bg-background font-inter">
+      {/* Fixed Action Buttons */}
+      <ProsperoButton />
+      <WhatsAppButton phoneNumber="+6285716755537" />
+
       {/* Navigation */}
       <nav 
         className={`fixed top-0 w-full z-50 transition-all duration-300 ${
@@ -46,7 +52,7 @@ const Index = () => {
           <img 
             src={logoImage} 
             alt="PT. Mandala Prima Logo" 
-            className="h-12 transform hover:scale-105 transition-transform duration-300"
+            className="h-12 w-12 transform hover:scale-105 transition-transform duration-300 object-contain"
           />
           
           <div className="hidden md:flex items-center space-x-1">
@@ -244,16 +250,15 @@ const Index = () => {
               Get To Know
             </div>
             <h2 className="text-5xl md:text-6xl font-bold text-primary mb-8 tracking-tight">About Us</h2>
-            <p className="text-xl text-muted-foreground max-w-6xl mx-auto font-light leading-relaxed">
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto font-light leading-relaxed text-center">
               The company started in 2001, starting as a trading company for cocoa and chocolate products.<br></br>
               2010 We started to produce cocoa powder by ourselves for local market sales.<br></br>
               By the time, we started to introduce our products overseas and now we have been able to export our products to several countries at 4 continents. <br></br>
-              And now start from 2025 we increase the production capacity on the 12,500m2 land with Food Safety System, trustable quality control team and more complete certification.<br></br>
+              And now start from 2025 we increase the production capacity on the 12,500m2 land with Food Safety System, trustable quality control team and more complete certification.
               <br></br>
               ---
               <br></br>
               We are not the first<br></br>We are not the biggest<br></br>But We are a trustworthy partner
-
             </p>
           </div>
           
@@ -305,129 +310,13 @@ const Index = () => {
             </p> */}
           </div>
           
-          <div className="grid lg:grid-cols-3 gap-8">
-            <Card className="overflow-hidden shadow-soft hover:shadow-luxury transition-all duration-500 group border-0">
-              <div className="h-64 bg-gradient-primary relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-accent opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
-              </div>
-              <div className="p-8">
-                <h3 className="text-2xl font-bold text-primary mb-4 group-hover:text-accent transition-colors">Raw Cocoa Beans</h3>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-              Ut enim ad minim veniam, quis nostrud exercitation.
-                </p>
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <Button 
-                      variant="outline" 
-                      className="w-full group-hover:bg-accent group-hover:text-accent-foreground group-hover:border-accent transition-all duration-300"
-                    >
-                      Learn More
-                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </Button>
-                  </DialogTrigger>
-                  <DialogContent className="sm:max-w-[425px]">
-                    <DialogHeader>
-                      <DialogTitle>Raw Cocoa Beans</DialogTitle>
-                      <DialogDescription className="pt-4">
-                        Our premium raw cocoa beans are carefully selected from the finest plantations, ensuring superior quality and rich flavor profiles. Perfect for artisanal chocolate making and high-end confectionery production.
-                      </DialogDescription>
-                    </DialogHeader>
-                    <div className="py-4">
-                      <h4 className="font-semibold mb-2">Key Features:</h4>
-                      <ul className="list-disc pl-4 space-y-2">
-                        <li>Hand-picked and quality-graded beans</li>
-                        <li>Sustainably sourced from premium estates</li>
-                        <li>Rich in natural flavonoids and antioxidants</li>
-                        <li>Optimal fermentation for enhanced flavor</li>
-                      </ul>
-                    </div>
-                  </DialogContent>
-                </Dialog>
-              </div>
-            </Card>
-            
-            <Card className="overflow-hidden shadow-soft hover:shadow-luxury transition-all duration-500 group border-0">
-              <div className="h-64 bg-milk-chocolate relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-accent opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
-              </div>
-              <div className="p-8">
-                <h3 className="text-2xl font-bold text-primary mb-4 group-hover:text-accent transition-colors">Chocolate Liquor</h3>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-              Ut enim ad minim veniam, quis nostrud exercitation.
-                </p>
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <Button 
-                      variant="outline" 
-                      className="w-full group-hover:bg-accent group-hover:text-accent-foreground group-hover:border-accent transition-all duration-300"
-                    >
-                      Learn More
-                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </Button>
-                  </DialogTrigger>
-                  <DialogContent className="sm:max-w-[425px]">
-                    <DialogHeader>
-                      <DialogTitle>Chocolate Liquor</DialogTitle>
-                      <DialogDescription className="pt-4">
-                        Our chocolate liquor is crafted from the finest cocoa beans, offering a pure and intense chocolate flavor. It serves as the perfect base for creating premium chocolate products and confectioneries.
-                      </DialogDescription>
-                    </DialogHeader>
-                    <div className="py-4">
-                      <h4 className="font-semibold mb-2">Key Features:</h4>
-                      <ul className="list-disc pl-4 space-y-2">
-                        <li>100% pure cocoa mass</li>
-                        <li>Rich and intense chocolate flavor</li>
-                        <li>Smooth texture and consistency</li>
-                        <li>Perfect for premium chocolate manufacturing</li>
-                      </ul>
-                    </div>
-                  </DialogContent>
-                </Dialog>
-              </div>
-            </Card>
-            
-            <Card className="overflow-hidden shadow-soft hover:shadow-luxury transition-all duration-500 group border-0">
-              <div className="h-64 bg-warm-bronze relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-accent opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
-              </div>
-              <div className="p-8">
-                <h3 className="text-2xl font-bold text-primary mb-4 group-hover:text-accent transition-colors">Cocoa Powder</h3>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-              Ut enim ad minim veniam, quis nostrud exercitation.
-                </p>
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <Button 
-                      variant="outline" 
-                      className="w-full group-hover:bg-accent group-hover:text-accent-foreground group-hover:border-accent transition-all duration-300"
-                    >
-                      Learn More
-                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </Button>
-                  </DialogTrigger>
-                  <DialogContent className="sm:max-w-[425px]">
-                    <DialogHeader>
-                      <DialogTitle>Cocoa Powder</DialogTitle>
-                      <DialogDescription className="pt-4">
-                        Our premium cocoa powder is processed to perfection, delivering rich color and intense chocolate flavor. Ideal for baking, beverages, and various culinary applications.
-                      </DialogDescription>
-                    </DialogHeader>
-                    <div className="py-4">
-                      <h4 className="font-semibold mb-2">Key Features:</h4>
-                      <ul className="list-disc pl-4 space-y-2">
-                        <li>Fine texture and consistent particle size</li>
-                        <li>Deep, rich color</li>
-                        <li>Superior dispersibility</li>
-                        <li>Versatile application in food products</li>
-                      </ul>
-                    </div>
-                  </DialogContent>
-                </Dialog>
-              </div>
-            </Card>
+          <div className="max-w-5xl mx-auto">
+            <img 
+              src={cocoaVariants} 
+              alt="Cocoa Powder Variants" 
+              className="w-full h-auto rounded-lg shadow-elegant hover:shadow-luxury transition-all duration-500"
+              data-aos="fade-up"
+            />
           </div>
         </div>
       </section>
