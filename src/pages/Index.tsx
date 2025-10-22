@@ -56,26 +56,33 @@ const Index = () => {
           />
           
           <div className="hidden md:flex items-center space-x-1">
-            {['home', 'about', 'products', 'certificate', 'contact'].map((item) => (
+            {['home', 'about', 'products', 'certificate', 'contact', 'ProsperoFood'].map((item) => {
+            const isProspero = item === 'ProsperoFood';
+            return (
               <a
                 key={item}
-                href={`#${item}`}
+                href={isProspero ? "https://gitmil003-bot.github.io/Prospero/" : `#${item}`}
+                target={isProspero ? "_blank" : "_self"}
+                rel={isProspero ? "noopener noreferrer" : undefined}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                   activeSection === item
                     ? 'text-primary bg-primary/10'
                     : 'text-foreground/60 hover:text-primary hover:bg-primary/5'
                 }`}
                 onClick={(e) => {
-                  e.preventDefault();
-                  document.querySelector(`#${item}`)?.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start',
-                  });
+                  if (!isProspero) {
+                    e.preventDefault();
+                    document.querySelector(`#${item}`)?.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'start',
+                    });
+                  }
                 }}
               >
                 {item.charAt(0).toUpperCase() + item.slice(1)}
               </a>
-            ))}
+            );
+          })}
             <Button
               variant="outline"
               size="sm"
