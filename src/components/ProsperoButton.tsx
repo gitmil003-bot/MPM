@@ -5,7 +5,7 @@ import prosperoLogo from "@/assets/images/Logo Prosperofood.png";
 export const ProsperoButton = () => {
   const handleClick = () => {
     // Placeholder URL - you can replace this with the actual Prospero website
-    const url = "https://prospero.example.com";
+    const url = "https://gitmil003-bot.github.io/Prospero/";
     window.open(url, "_blank");
   };
 
